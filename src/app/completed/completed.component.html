@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="list-group">
+            <a  
+                *ngFor = "let complete of completed; let i=index"
+                class="list-group-item clearfix"
+                [routerLink]="['complete/',i]"
+                routerLinkActive="active">{{complete.name}}</a>
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<label>Task Name</label>
+<br>
+<input type="text" #name>
+<br>
+<label>task Priority</label>
+<br>
+<select  #priority>
+    <option  *ngFor = "let priority of priorityA" [ngValue]="priority">{{priority}}</option>
+</select>
+<br>
+<label>Description</label>
+<br>
+<input type="text" #desc>
+<br>    
+<button type="submit" (click)="Add()">Add</button>

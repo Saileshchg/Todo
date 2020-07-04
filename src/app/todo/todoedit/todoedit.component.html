@@ -1,0 +1,19 @@
+<div *ngIf="disptasks">
+<label>Task Name</label>
+<br>
+<input type="text" [(ngModel)]="name">
+<br>
+<label>task Priority</label>
+<br>
+<select  [(ngModel)]="priority">
+    <option  *ngFor="let priorityB of priorityA" [ngValue]="priorityB">{{priorityB}}</option>
+</select>
+<br>
+<label>Description</label>
+<br>
+<input type="text" [(ngModel)]="description">
+<br>
+<button type="submit" (click)="Update()">Update</button>
+<br>
+</div>
+<p *ngIf="dispmessage">Updated tasks</p>

@@ -1,0 +1,21 @@
+<div *ngIf="disptasks ">
+    <h4>{{todo.name}}</h4>
+    <h5>{{todo.priority}}</h5>
+    <p>{{todo.description}}<p>
+    
+    <div>
+        <button 
+        class="btn btn-primary"
+        (click)="onComplete()">
+        Mark as completed
+        </button>
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="onDelete()">Delete</button>
+    </div>
+    <div >
+        <button class="btn btn-primary"(click)="onEdit()">Edit</button>
+    </div>
+</div>
+<p *ngIf="dispcomplete"> Task marked as complete </p>
+<p *ngIf="dispdelete"> Task Deleted </p>
